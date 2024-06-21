@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="styles.css" rel="stylesheet">
+        <title>CalcuWage</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script src="calcu.js"></script>
+        <h1 class="hv">World Wage Calculator</h1>
+        <h2 class="hv">With working Calculator</h2>
+        <div class="container">
+            <div id="calculator">
+                <input id="display" readonly></input>
+                <div class="calc-keys" id="calculator-key">
+                    <button type="button" class="key-zero numbers" onclick="appendToDisplay('0')">0</button>
+                    <button class="numbers" onclick="appendToDisplay('.')">.</button>
+                    <button class="key-operate operations" onclick="solve()">=</button>
+                    <button class="key-operate operations" onclick="appendToDisplay('+')">+</button>
+                    <button class="key-operate operations" onclick="appendToDisplay('-')">-</button>
+                    <button class="key-operate operations" onclick="appendToDisplay('*')">X</button>
+                    <button class="key-operate operations" onclick="appendToDisplay('/')">/</button>
+                    <button class="key-operate operations" onclick="clr()">AC</button>
+                    <button class="numbers" onclick="appendToDisplay('1')">1</button>
+                    <button class="numbers" onclick="appendToDisplay('2')">2</button>
+                    <button class="numbers" onclick="appendToDisplay('3')">3</button>
+                    <button class="numbers" onclick="appendToDisplay('4')">4</button>
+                    <button class="numbers" onclick="appendToDisplay('5')">5</button>
+                    <button class="numbers" onclick="appendToDisplay('6')">6</button>
+                    <button class="numbers" onclick="appendToDisplay('7')">7</button>
+                    <button class="numbers" onclick="appendToDisplay('8')">8</button>
+                    <button class="numbers" onclick="appendToDisplay('9')">9</button>
+                </div>
+            </div>
+            <div class="wage">
+                <h2>Wage Calculator</h2>
+                <form id="wage-form">
+                    <label for="hours">Hours Worked:</label>
+                    <input type="number" id="hours" name="hours" placeholder="Hours Worked" required><br><br>
+                    <label for="wage">Hourly Wage:</label>
+                    <input type="number" id="wage" name="wage" placeholder="Hourly Wage" required><br><br>
+                    <select class="dropdown" id="dropdown">
+                        <option>Select Your Country</option>
+                        <option>Afghanistan</option>
+                        <option>Albania</option>    
+                        <option>Algeria</option>
+                        <option>Angola</option>
+                        <option>Argentina</option>
+                        <option>Armenia</option>
+                        <option>Aruba</option>
+                        <option>Australia</option>
+                        <option>Austria</option>
+                        <option>Azerbaijan</option>
+                        <option>Bahamas</option>
+                        <option>Bahrain</option>
+                        <option>Bangladesh</option>
+                        <option>Barbados</option>
+                        <option>Belarus</option>
+                        <option>Belguim</option>
+                        <option>Bermuda</option>
+                        <option>Bolivia</option>
+                        <option>Bosnia and Herzeg</option>
+                        <option>Botswana</option>
+                        <option>Brazil</option>
+                        <option>Brunei</option>
+                        <option>Bulgaria</option>
+                        <option>Cambodia</option>
+                        <option>Cameroon</option>
+                        <option>Canada</option>
+                        <option>Cayman Islands</option>
+                        <option>Chile</option>
+                        <option>China</option>
+                        <option>Colombia</option>
+                        <option>Congo</option>
+                        <option>Costa Rico</option>
+                        <option>Croatia</option>
+                        <option>Cyprus</option>
+                        <option>Czech Republic</option>
+                        <option>Denmark</option>
+                        <option>Dominican Republic</option>
+                        <option>Ecuador</option>
+                        <option>Egypt</option>
+                        <option>El Salvador</option>
+                        <option>Equatorial Guinea</option>
+                        <option>Estonia</option>
+                        <option>Ethiopia</option>
+                        <option>Euro area</option>
+                        <option>European Union</option>
+                        <option>Fiji</option>
+                        <option>Finland</option>
+                        <option>France</option>
+                        <option>Gabon</option>
+                        <option>Gambia</option>
+                        <option>Germany</option>
+                        <option>Ghana</option>
+                        <option>Greece</option>
+                        <option>Guatemala</option>
+                        <option>Guinea</option>
+                        <option>Honduras</option>
+                        <option>Hong Kong</option>
+                        <option>Hungary</option>
+                        <option>IceLand</option>
+                        <option>India</option>
+                        <option>Indonesia</option>
+                        <option>Irag</option>
+                        <option>Ireland</option>
+                        <option>Israel</option>
+                        <option>Italy</option>
+                        <option>Jamaica</option>
+                        <option>Japan</option>
+                        <option>Kazakhstan</option>
+                        <option>Kenya</option>
+                        <option>Kosovo</option>
+                        <option>Kuwait</option>
+                        <option>Malawi</option>
+                        <option>Mexico</option>
+                        <option>Morocco</option>
+                        <option>Mozambique</option>
+                        <option>Netherlands</option>
+                        <option>New Zealand</option>
+                        <option>Nigeria</option>
+                        <option>Norway</option>
+                        <option>Pakistan</option>
+                        <option>Panama</option>
+                        <option>Peru</option>
+                        <option>Philippines</option>
+                        <option>Portugal</option>
+                        <option>Puerto Rico</option>
+                        <option>Russia</option>
+                        <option>Singapore</option>
+                        <option>South Africa</option>
+                        <option>South Korea</option>
+                        <option>Spain</option>
+                        <option>Suriname</option>
+                        <option>Swaziland</option>
+                        <option>Sweden</option>
+                        <option>Switzerland</option>
+                        <option>Syria</option>
+                        <option>Thailand</option>
+                        <option>Trinidad And Tobago</option>
+                        <option>Turkey</option>
+                        <option>Ukraine</option>
+                        <option>United Kingdom</option>
+                        <option>United States</option>
+                        <option>Uruguay</option>
+                        <option>Uzbekistan</option>
+                        <option>Venezuela</option>
+                        <option>Vietnam</option>
+                        <option>Zambia</option>
+                        <option>Zimbabwe</option>
+                    </select><br><br>
+                    <input type="submit" value="Calculate Wage" class="submit" onclick="calcuWage()">
+                    <h3 id="results" class="results">Results:</h3>
+                </form>
+            </div>
+            <div>
+                <p class="description">This website is focused on generating wage result based off of where you live in the world this website will calculate your wage after the tax rate is taken into effect on it.</p>
+            </div>
+        </div>
+    </body>
+</html>

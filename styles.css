@@ -1,0 +1,155 @@
+* {
+    font-family: "Helvetica Neue", sans-serif;
+    box-sizing: border-box;
+  }
+  
+  body {
+      background-image: url(./pictures/bk.jpg);
+      overflow: hidden;
+  }
+
+  
+  
+  .calc-text {
+    margin-bottom: 20px;
+    padding-left: 5px;
+  }
+
+  .calc-text p {
+    width: 100%;
+    font-size: 3.5rem;
+    text-align: end;
+    background: transparent;
+    color: #fff;
+    border: none;
+    outline: none;
+    word-wrap: break-word;
+    word-break: break-all;
+  }
+
+  .numbers, .key-operate{
+    background: #333333;
+    color: #fff;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 70%;
+    cursor: pointer;
+    height: 65px;
+    width: 65px;
+  }
+  
+  button:active, button:focus {
+    filter: brightness(120%);
+  }
+
+  .calc-keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-row-gap: 15px;
+    grid-column-gap: 15px;
+  }
+  
+  .key-zero {
+    grid-column: span 2;
+    width: 100%;
+    border-radius: 30px;
+  }
+  
+  .key-operate {
+    background: #ff9501;
+  }
+
+  .key-others {
+    background: #a6a6a6;
+    color: #fff;
+  }
+
+#calculator {
+  padding: 10px;
+  max-width: 350px;
+  max-height: 500px;
+  border: none;
+  background-color: rgb(39, 37, 37);
+}
+
+#display {
+  padding: 10px;
+  font-size: 1.5rem;
+  text-align: right;
+  border: none;
+  margin-bottom: 10px;
+  border: none;
+  background-color: #333333;
+  color: #fff;
+}
+
+option {
+  border: none;
+  background-color: #333333;
+  color: whitesmoke;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+
+.results {
+  padding: 10px;
+  color: #ff9501;
+}
+
+.wage {
+  background-color:#333333;
+  padding: 10px;
+  color: #ff9501;
+  max-width: 350px;
+}
+
+.submit {
+  padding: 10px;
+  background-color: #ff9501;
+  border: none;
+  color: #fff;
+}
+
+.hv {
+  color: white;
+  animation: move 5s infinite;
+  position: relative;
+}
+
+@keyframes move {
+  from {left: 0px;}
+  to {left: 1000px;}
+}
+
+.description {
+  padding: 10px;
+  font-size: 50px;
+  color: #fff;
+}
+
+.results {
+  padding: 0px;
+}
+
+@media only screen and (max-width: 700px) {
+  .hv {
+    animation: none;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  body {
+    overflow: scroll;
+  }
+
+  .description {
+    font-size: 30px;
+  }
+}
